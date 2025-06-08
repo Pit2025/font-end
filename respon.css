@@ -1,0 +1,135 @@
+@media (min-width :601px) and (max-width: 880px) {
+    .tnx h2 {
+        font-size: 5vw;
+    }
+
+    .txt h1 {
+        font-size: 14vw;/*ตรงนี้ๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆ*/
+    }
+    .txt{z-index: ;}
+
+    .card {
+        grid-template-columns: 9vh ;
+        gap: 2px;
+        z-index: 0;
+    }
+
+    .card div:nth-child(1) {
+        width: 35vw;
+        height: 20vh;
+        
+    }
+
+    .creator p {
+        font-size: ;
+    }
+
+    h1 span {
+        font-size: ;
+    }
+
+    .madetxt {
+        font-size: ;
+    }
+    .esport{margin-right: 10vw;z-index:0;}
+
+}
+
+@media (max-width: 600px) {
+    .tnx h2 {
+        font-size: 1rem;
+    }
+
+    .txt h1 {
+        font-size: 4rem;
+    }
+
+    .card {
+        grid-template-columns: 10rem 10rem;
+        gap: 1;
+
+        justify-content: center;
+    }
+
+    .card div:nth-child(1) {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .creator p {
+        font-size: 1.2rem;
+    }
+
+    h1 span {
+        font-size:medium;
+    }
+
+    .madetxt {
+        font-size:medium;
+    }
+
+    .content {
+        top: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between center;
+        position: absolute;
+    }
+
+    .esport {
+        width: 100% !important
+    }
+
+    .container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 100%;
+        /* ป้องกันไม่ให้ล้น */
+    }
+
+    #bgVideo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(80%);
+        margin-left: -400px;
+    }
+
+    .creator p {
+        font-size: x;
+        font-family: monospace;
+    }
+
+    .card h2 {
+        color: #fff;
+        text-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+        padding: 5px 10px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        font-size: 1.0rem;
+        letter-spacing: 1px;
+    }
+
+    .card .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 90%;
+        height: 220px;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+}

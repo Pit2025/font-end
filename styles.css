@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Athiti:wght@200;300;400;500;600;700&family=Lilita+One&family=Lobster&family=Special+Gothic+Condensed+One&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+.mute-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.mute-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.mute-toggle i {
+  pointer-events: none;
+  background: none;
+}
+
+.mobile-cover-video {
+  display: none;
+}
+
+
+
+@keyframes animate {
+  to {
+    background-position: 450%;
+  }
+}
+
+.navBar {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  height: 15vh;
+}
+
+.navBar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navBar ul li {
+  padding: 0 25px;
+}
+
+.navBar ul li a {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+.navBar .logo a {
+  font-size: 2.3rem;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.esport {
+  color: #fff;
+  padding: 25px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+.card h2 {
+  color: #fff;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+  padding: 5px 10px;
+  border-radius: 0px;
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.card .box1,
+.box2,
+.box3,
+.box4 {
+  width: 90%;
+  height: 220px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 19px 38px rgba(255, 255, 255, 0.2), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: 0.3s;
+}
+
+.box1 {
+  background-image: url("https://thumbor.4gamers.com.tw/ybVXob1CiURloIT6nsktO9xaIuk=/adaptive-fit-in/1600x1600/filters:format(avif):quality(60):no_upscale()/https%3A%2F%2Fimg.4gamers.com.tw%2Fckfinder-th%2Fimage2%2Fauto%2F2021-04%2Frov%20%E0%B8%A5%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%87%E0%B8%84%E0%B9%8C-210429-145224.jpg%3FversionId%3DgYjKD2MuiZiAf.WLBCnI2W5Eb2nG_osA");
+}
+
+.box2 {
+  background-image: url("https://img.4gamers.com.tw/news-image/dcb583b7-97b4-4b6c-9613-4291422c6db2.jpg");
+}
+
+.box3 {
+  background-image: url("https://img.4gamers.com.tw/ckfinder-th/image2/auto/2022-09/%E0%B8%AA%E0%B8%81%E0%B8%B4%E0%B8%99%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%20rov%20%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94-220920-182456.webp?versionId=COkr4JK5KFP5pzg7ICTR_MXAns89_LZ5");
+}
+
+.box4 {
+  background-image: url("https://i0.wp.com/news.seagm.com/wp-content/uploads/2023/03/krixi-skin.jpeg?resize=750%2C461&ssl=1");
+}
+
+.esport h2 {
+  font-size: 2.5rem;
+  letter-spacing: 1.8px;
+  background: linear-gradient(135deg, #ffea03 20%, #e6ff03b6 25%, #e6ff036e 50%, #e6ff03b6 75%, #ffea03 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
+}
+
+.txt h1 {
+  font-size: 8.0rem;
+  background: linear-gradient(135deg, #ffea03 20%, #e6ff03b6 25%, #e6ff036e 50%, #e6ff03b6 75%, #ffea03 100%);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 10s linear infinite;
+}
+
+.esport p {
+  opacity: 0.6;
+  font-size: 1.5rem;
+}
+
+.tnx h2 i {
+  color: #fd7e13;
+}
+
+h1 {
+  color: #fff;
+  font-size: 5.0vh;
+  font-weight: 600;
+}
+
+h1 span {
+  color: #51f73b;
+  position: relative;
+}
+
+h1 span::before {
+  content: "";
+  height: 30px;
+  width: 2px;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  background: #BD53ED;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+  animation: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.audio-container {
+  width: 200px;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.page-sources {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .navBar {
+    width: 100%;
+  }
+
+  .container {
+    overflow-x: hidden;
+    min-height: 165vh;
+    max-height: none;
+  }
+
+  .card .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 190px;
+    height: 190px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  #muteBtn, .mute-toggle, .fa-music {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .card h2 {
+    font-size: 1.0rem;
+  }
+
+  h1 {
+    font-size: 2.5vh;
+  }
+
+  .esport h2 {
+    font-size: 0.7rem;
+  }
+
+  .txt h1 {
+    font-size: 2.5rem;
+  }
+
+  .esport p {
+    font-size: 0.5rem;
+  }
+
+  .content {
+    width: 95%;
+  }
+
+  .card {
+    grid-template-columns: auto;
+  }
+
+  body {
+    background: #444;
+  }
+
+  audio {
+    width: 180px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body > *:not(.mobile-cover-video) {
+    display: flex!important;
+  }
+
+  .mobile-cover-video {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 9999;
+  }
+
+  .mobile-cover-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+h2 {
+  font-family: "Anuphan", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: #1D1E23;
+  color: #fff;
+  position: relative;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(80%);
+}
+
+.container {
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+@media only screen {
+  .esport {width: 50% !important}}
