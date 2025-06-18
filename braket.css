@@ -1,123 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap');
 
-/* ======== BASIC SETUP ======== */
-:root {
-  --gold: #FFD700;
-  --dark-bg: #1a1a1a;
-  --light-bg: #2c2c2c;
-  --text-color: #111111;
-  --border-color: #444;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+Thai+Looped:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* เพิ่มระยะห่างเมื่อกดลิงก์ เพื่อไม่ให้หัวข้อถูกเมนูบัง */
-}
 
-body {
-  font-family: 'Chakra Petch', sans-serif;
-  background-color: var(--dark-bg);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-}
 
-h1, h2 {
-  font-weight: 700;
-  color: var(--gold);
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+@media only screen/*(min-width: 1000px) and (max-width: 1440px)*/{
+      html {
+            scroll-behavior: smooth;
+      }
+      body {
+            font-family: sans-serif;
+            background: #383535;
+            padding: 20px;
+            text-align: center;
+      }
+      .element{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000000;
+            height:fit-content;
+            border: solid black;
+            border-radius: 1%;
+      }
+      h2 {
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size:4vw;
+      color: #FFD700;
+      }
+      .menu{
+            display: flex; 
+            float: left; 
+            
+            
+            
+      }
+      .menu2{     
+            display: flex; 
+            float: right; 
+            
+            
+      }
+      span{
+            background-color: rgb(19, 93, 253);
+            font-size: 2rem;
+            text-decoration: none;
+            color: #FFC300;
+            border: solid black;
+      }
+      a{text-decoration: none;}
+            
+      
 
-main {
-  padding: 120px 20px 40px 20px; /* เพิ่ม padding-top เพื่อไม่ให้เนื้อหาถูก Header บัง */
-}
-
-/* ======== HEADER & NAVIGATION (แก้ไขใหม่ทั้งหมด) ======== */
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: rgba(26, 26, 26, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
-  
-  /* ทำให้เมนูติดด้านบนเสมอ */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  box-sizing: border-box;
-}
-
-.logo-container h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.navigation a {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin-left: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navigation a:hover {
-  background-color: var(--gold);
-  color: var(--dark-bg);
-}
-
-/* ======== BRACKET SECTION ======== */
-.bracket-section {
-  margin-bottom: 60px;
-}
-
-.bracket-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  border-bottom: 2px solid var(--gold);
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-/* แก้ไข: เปลี่ยนจาก .element เป็น .bracket-container */
-.bracket-container {
-  background-color: var(--light-bg);
-  padding: 40px 20px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  /* ทำให้เลื่อนดูในแนวนอนได้ */
-  overflow-x: auto;
-}
-
-/* ======== JQUERY BRACKET CUSTOMIZATION ======== */
-.jQBracket .team {
-  background-color: #333;
-  color: var(--text-color);
-}
-.jQBracket .team:hover {
-  background-color: #444;
-}
-.jQBracket .win .label {
-  color: var(--gold);
-  font-weight: bold;
-}
-.jQBracket .lose .label {
-  text-decoration: line-through;
-  color: #aaa;
-}
-.jQBracket .score {
-  background-color: #222;
-  color: var(--gold);
-}
-.jQBracket .connector.win, .jQBracket .connector.win .connector {
-    border-color: var(--gold);
 }
