@@ -1,100 +1,85 @@
 
-const data = {
-  teams: [
-    ["โชคเหนือฝีมือ	", "Thunder express"],
-    ["ผมยอมแล้วคับพรี่", "พี่จ๋าป้อมจะแตก"],
-    ["ไม่เหม็นสำหรับผม", "Jaaocto"],
-    ["Chickennut", "เละเทะ อีสปอร์ท"],
-    ["นี้คนหรือขี้", "Nightmare"],
-    ["พยัคฆ์ร้าย777	", "พี่มาแล้วน้อง"],
-    ["The ÉLAN", "While Cat Esports"],
-    ["Chickennut", "เละเทะ อีสปอร์ท"],
-    ["ผมมาแจก", "เหนื่อยฟรีไม่มีถ้วย"],
-    ["แก๊งค์คนป่วย", "Fieryer E-SPORT"],
-    ["Grasped Shamped Morped Phazed Draped", "Aurora"],
-    ["ชายสามเกย์สอง", "ช้างเผือก"],
-    ["MY Ego", null],
-    ["หมีเนยฮิลใจ", null],
-    ["แก๊งราชภัฏหัวหิน", null],
-    ["นักรบมังกรกำลังจะกลับบ้าน", null]
+$(document).ready(function() {
 
-  ],
-  "results": [
-    [
-      [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0],
-      [0, 0], [0, 0]
+  // --- 1. ข้อมูลสำหรับสายบน (Upper Bracket) ---
+  const upperBracketData = {
+    // แก้ไข: เพิ่มทีมให้ครบ 16 ทีมตามข้อมูลต้นฉบับ
+    teams: [
+      ["โชคเหนือฝีมือ", "Thunder express"],
+      ["ผมยอมแล้วคับพรี่", "พี่จ๋าป้อมจะแตก"],
+      ["ไม่เหม็นสำหรับผม", "Jaaocto"],
+      ["Chickennut", "เละเทะ อีสปอร์ท"],
+      ["นี้คนหรือขี้", "Nightmare"],
+      ["พยัคฆ์ร้าย777", "พี่มาแล้วน้อง"],
+      ["The ÉLAN", "While Cat Esports"],
+      // นี่คือทีมที่ตกหล่นไปในเวอร์ชันก่อนหน้า
+      ["Chickennut", "เละเทะ อีสปอร์ท"], 
+      ["ผมมาแจก", "เหนื่อยฟรีไม่มีถ้วย"],
+      ["แก๊งค์คนป่วย", "Fieryer E-SPORT"],
+      ["Grasped Shamped Morped Phazed Draped", "Aurora"],
+      ["ชายสามเกย์สอง", "ช้างเผือก"],
+      ["MY Ego", null],
+      ["หมีเนยฮิลใจ", null],
+      ["แก๊งราชภัฏหัวหิน", null],
+      ["นักรบมังกรกำลังจะกลับบ้าน", null]
     ],
-    [
-      [0, 0], [0, 0], [0, 0], [0, 0],
-      [0, 0], [0, 0], [0, 0]
-    ],
-    [
-      [0, 0], [0, 0], [0, 0], [0, 0]
-    ],
-    [
-      [0, 0], [0, 0]
-    ],
-    [
-      [0, 0]
+    // โครงสร้างผลลัพธ์สำหรับ 16 ทีม (8 -> 4 -> 2 -> 1)
+    results: [
+      [[null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null]],
+      [[null, null], [null, null], [null, null], [null, null]],
+      [[null, null], [null, null]],
+      [[null, null]]
     ]
-  ]
-}
+  };
 
-$(function () {
-  $('#tournament').bracket({
-    init: data,
-    teamWidth: 100,      // ความกว้างของช่องทีม
-    scoreWidth: 30,      // ความกว้างของช่องคะแนน
-    matchMargin: 30,     // ระยะห่างระหว่างแมตช์
-    roundMargin: 50      // ระยะห่างระหว่างรอบ
-  });
-});
-
-//////////////////////////////////////////////////////////////////////////////
-const tada = {
-  "teams": [
-    [null, null],
-    [null, null],
-    [null, null],
-    [null, null],
-    [null, null],
-    [null, null],
-    [null, null],
-    [null, null]
-  ],
-  "results": [
-    [
-      [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]
+  // --- 2. ข้อมูลสำหรับสายล่าง (Lower Bracket) ---
+  // แก้ไข: ใช้โครงสร้างที่เรียบง่ายและถูกต้องสำหรับ 8 ทีม
+  const lowerBracketData = {
+    teams: [
+      [null, null], [null, null], [null, null], [null, null]
     ],
-    [
-      [0, 0], [0, 0], [0, 0], [0, 0]
-    ],
-    [
-      [0, 0], [0, 0]
-    ],
-    [
-      [0, 0]
+    // โครงสร้างผลลัพธ์สำหรับ 8 ทีม (4 -> 2 -> 1)
+    results: [
+      [[null, null], [null, null], [null, null], [null, null]],
+      [[null, null], [null, null]],
+      [[null, null]]
     ]
-  ]
-}
+  };
 
-$(function () {
-  $('#tournament2').bracket({
-    init: tada
-  });
-});
-//////////////////////////////////////////////////////////////////////////////
-const oneonone = {
-  "teams": [
-    [null, null]
-  ],
-  "results": [
-    [0, 0]
-  ]
-}
+  // --- 3. ข้อมูลสำหรับรอบชิงชนะเลิศ (Finals) ---
+  const finalsData = {
+    teams: [
+      [null, null]
+    ],
+    results: [
+      [[null, null]]
+    ]
+  };
 
-$(function () {
-  $('#tournament3').bracket({
-    init: oneonone
+  // --- 4. นำข้อมูลไปสร้างตารางการแข่งขัน ---
+  // นำ try-catch ออกได้เลย เพราะมั่นใจว่าข้อมูลถูกต้องแล้ว
+  
+  $('#tournament-finals').bracket({
+    init: finalsData,
+    teamWidth: 120,
+    scoreWidth: 30,
+    matchMargin: 50
   });
+
+  $('#tournament-upper').bracket({
+    init: upperBracketData,
+    teamWidth: 120,
+    scoreWidth: 30,
+    matchMargin: 40,
+    roundMargin: 60
+  });
+
+  $('#tournament-lower').bracket({
+    init: lowerBracketData,
+    teamWidth: 120,
+    scoreWidth: 30,
+    matchMargin: 40,
+    roundMargin: 60
+  });
+
 });
