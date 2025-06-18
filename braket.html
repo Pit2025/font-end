@@ -1,91 +1,31 @@
 <!DOCTYPE html>
-<html lang="th">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SAPA E-Sport 2025</title>
+  <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="sapa.png" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="respon.css">
-  <script src="animate.js" defer></script>
+  <!-- CSS ของ jQuery Bracket -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-bracket@0.11.1/dist/jquery.bracket.min.css">
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- jQuery Bracket -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-bracket@0.11.1/dist/jquery.bracket.min.js"></script>
+  <link rel="stylesheet" href="braket.css">
+  <title>SAPA E-Sport 2025</title>
 </head>
-
-  <body>
-
-      <!--<div class="mobile-cover-video">
-        <video autoplay muted loop playsinline>
-          <source src="mobile01.mp4" type="video/mp4">
-          เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
-        </video>
-      </div>-->
-
-      <!-- VDO BG -->
-      <video autoplay muted loop playsinline id="bgVideo">
-        <source src="bg01.webm" type="video/webm" />
-        เบราว์เซอร์ของคุณไม่รองรับวิดีโอพื้นหลัง
-      </video>
-
-      <!-- Sound BG -->
-      <audio id="bgMusic" preload="auto">
-        <source src="ride on.mp3" type="audio/mpeg" />
-        เบราว์เซอร์ของคุณไม่รองรับเสียงเพลง
-      </audio>
-
-      <!-- Play/pause -->
-      <button id="muteBtn" class="mute-toggle" title="เปิดเสียง">
-        <i class="fa-solid fa-volume-xmark"></i>
-      </button>
-
-      <div class="container bg">
-        <div class="navBar"></div>
-        <div class="content">
-          <div class="esport">
-            <div class="tnx">
-              <meta name="head1" content="BSP, SAPA">
-              <h2><i class="school name"></i> BSPWITTAYA</h2>
-            </div>
-            <div class="txt">
-              <h1>SAPA</h1>
-            </div>
-            <h1 class="madetxt">This page was made by <span></span></h1>
-            <div class="creator">
-              <p><small>เว็บไซต์สำหรับลงทะเบียนการแข่งขัน SAPA E-Sport ของโรงเรียนบางสะพานวิทยา
-                  จัดทำขึ้นโดยสภานักเรียนทีมเทคโนโลยีสารสนเทศ (IT Support - Student Council)</small></p>
-            </div>
-          </div>
-
-          <div class="card" style="width:50%; margin-left: 0;">
-            <a href="" target="_self">
-              <div class="box1">
-                <h2 id="myBtn">ลงทะเบียน</h2>
-              </div>
-            </a>
-
-            <a href="https://docs.google.com/spreadsheets/d/19xKETrp_Hu64OZP5bObaI1AzbglpTLk6VRg7ZKPh4q4/edit?gid=1386834576#gid=1386834576"
-              target="_blank">
-              <div class="box2">
-                <h2>ตรวจสอบ</h2>
-              </div>
-            </a>
-
-            <a href="rule.html" target="_blank">
-              <div class="box3">
-                <h2>ข้อควรรู้</h2>
-              </div>
-            </a>
-
-            <a href="braket.html" target="_blank">
-              <div class="box4">
-                <h2>ติดตามตารางแข่ง</h2>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-
-      
-  </body>
+<div class="menu">
+  <a href="#top"><span >สายบน</span></a>
+  <a href="#buttom"><span>สายล่าง</span></a>
+</div>
+<!--<div class="menu2"><a href="https://back-end-y49i.onrender.com"><span id="admin">admin</span></a></div>-->
+<body>
+  <h2 id="top">รอบชิง</h2>
+  <div class="element"><div id="tournament3"></div></div>
+  <h2 id="top">ทีมสายบน</h2>
+  <div class="element"><div id="tournament"></div></div>
+  <h2 id="buttom">ทีมสายล่าง</h2>
+  <div class="element"><div id="tournament2"></div></div>
+  <script src="braket.js"></script>
+</body>
 </html>
