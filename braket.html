@@ -28,4 +28,39 @@
   <div class="element"><div id="tournament2"></div></div>
   <script src="braket.js"></script>
 </body>
+  <script>
+function getBracketOptions() {
+  const width = window.innerWidth;
+
+  if (width >= 1440) {
+    return { teamWidth: 120, scoreWidth: 40, matchMargin: 30, roundMargin: 60 };
+  } else if (width >= 1024) {
+    return { teamWidth: 100, scoreWidth: 30, matchMargin: 25, roundMargin: 50 };
+  } else if (width >= 768) {
+    return { teamWidth: 80, scoreWidth: 25, matchMargin: 20, roundMargin: 40 };
+  } else {
+    // มือถือจอเล็ก
+    return { teamWidth: 60, scoreWidth: 20, matchMargin: 15, roundMargin: 30 };
+  }
+}
+
+// เรียก bracket แต่ละอัน
+$(function () {
+  const bracketOptions = getBracketOptions();
+  
+  $('#tournament').bracket({ init: data, ...bracketOptions }); 
+  $('#tournament2').bracket({ init: tada, ...bracketOptions }); 
+  $('#tournament3').bracket({ init: oneonone, ...bracketOptions }); 
+});
+
+// ปรับขนาดอัตโนมัติเมื่อ resize
+$(window).on('resize', function() {
+  const bracketOptions = getBracketOptions();
+
+  $('#tournament').bracket({ init: data, ...bracketOptions }); 
+  $('#tournament2').bracket({ init: tada, ...bracketOptions }); 
+  $('#tournament3').bracket({ init: oneonone, ...bracketOptions }); 
+});
+</script>
+
 </html>
