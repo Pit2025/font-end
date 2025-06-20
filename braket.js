@@ -80,7 +80,11 @@ const tada = {
 
 $(function () {
   $('#tournament2').bracket({
-    init: tada
+    init: tada,
+    teamWidth: 100,      // ความกว้างของช่องทีม
+    scoreWidth: 30,      // ความกว้างของช่องคะแนน
+    matchMargin: 30,     // ระยะห่างระหว่างแมตช์
+    roundMargin: 50      // ระยะห่างระหว่างรอบ
   });
 });
 //////////////////////////////////////////////////////////////////////////////
@@ -95,6 +99,10 @@ const oneonone = {
 
 $(function () {
   $('#tournament3').bracket({
-    init: oneonone
+    init: oneonone,
+    teamWidth: 300,      // ความกว้างของช่องทีม
+    scoreWidth: 30,      // ความกว้างของช่องคะแนน
+    matchMargin: 50,     // ระยะห่างระหว่างแมตช์
+    roundMargin: 50      // ระยะห่างระหว่างรอบ
   });
 });
