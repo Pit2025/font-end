@@ -12,6 +12,10 @@
             background: #383535;
             padding: 20px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
       }
       .element{
             display: flex;
@@ -19,8 +23,9 @@
             height: 100vh;
             background-color: #000000;
             height:fit-content;
-            border: solid black;
+            border: solid rgb(255, 102, 0);
             border-radius: 1%;
+            width: fit-content;
       }
       h2 {
       font-family: "Chakra Petch", sans-serif;
@@ -28,11 +33,16 @@
       font-style: normal;
       font-size:4vw;
       color: #FFD700;
+      margin-top: 10%;
+      margin-bottom: 0;
       }
       .menu{
-            display: flex; 
-            float: left; 
-            
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: #ffffff00;
             
             
       }
@@ -43,11 +53,11 @@
             
       }
       span{
-            background-color: rgb(19, 93, 253);
-            font-size: 2rem;
+            background-color: rgb(255, 255, 255);
+            font-size: 3vw;
             text-decoration: none;
-            color: #FFC300;
-            border: solid black;
+            border: solid rgba(0, 0, 0, 0);
+            border-radius: 10px;
       }
       a{text-decoration: none;}
             
