@@ -98,7 +98,6 @@
         object-fit: cover;
         z-index: -1;
         filter: brightness(80%);
-        margin-left: -400px;
     }
 
     .creator p {
