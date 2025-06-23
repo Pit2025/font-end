@@ -2,96 +2,65 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="sapa.png" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <!-- CSS ของ jQuery Bracket -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-bracket@0.11.1/dist/jquery.bracket.min.css">
   
-  <link rel="stylesheet" href="braket.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
+  <!-- jQuery Bracket -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-bracket@0.11.1/dist/jquery.bracket.min.js"></script>
+  <link rel="stylesheet" href="braket.css">
   <title>SAPA E-Sport 2025</title>
 </head>
-
+<div class="menu">
+  <a href="#top"><span style="color: green;">สายบน</span></a>
+  <a href="#buttom"><span style="color: red;"> สายล่าง</span></a>
+</div>
+<!--<div class="menu2"><a href="https://back-end-y49i.onrender.com"><span id="admin">admin</span></a></div>-->
 <body>
-  <div class="aurora-background">
-    <div class="aurora-shape shape1"></div>
-    <div class="aurora-shape shape2"></div>
-    <div class="aurora-shape shape3"></div>
-  </div>
-
-  <nav class="menu">
-    <a href="#upper-bracket">สายบน</a>
-    <a href="#lower-bracket">สายล่าง</a>
-  </nav>
-
-  <main>
-    <section id="final-section">
-      <h2 class="title">รอบชิงชนะเลิศ 👑</h2>
-      <div class="element"><div id="tournament3"></div></div>
-    </section>
-
-    <section id="upper-bracket">
-      <h2 class="title" >ทีมสายบน ⚔️</h2>
-      <div class="element"><div id="tournament"></div></div>
-    </section>
-
-    <section id="lower-bracket">
-      <h2 id="buttom" class="title">ทีมสายล่าง 🗡️</h2>
-      <div class="element"><div id="tournament2"></div></div>
-    </section>
-  </main>
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-bracket@0.11.1/dist/jquery.bracket.min.js"></script>
+  <h2 id="top">รอบชิง👑</h2>
+  <div class="element"><div id="tournament3"></div></div>
+  <h2 id="top" >ทีมสายบน⚔</h2>
+  <div class="element"><div id="tournament"></div></div>
+  <h2 id="buttom">ทีมสายล่าง🗡</h2>
+  <div class="element"><div id="tournament2"></div></div>
   <script src="braket.js"></script>
-  
-  <script>
-    var data = {
-      teams: [["Team Alpha", "Team Bravo"], ["Team Charlie", "Team Delta"], ["Team Echo", "Team Foxtrot"], ["Team Golf", "Team Hotel"]],
-      results: []
-    };
-    var tada = {
-      teams: [["Loser 1", "Loser 2"], ["Loser 3", "Loser 4"]],
-      results: []
-    };
-    var oneonone = {
-      teams: [["Winner UB", "Winner LB"]],
-      results: [],
-    };
-
-    function getBracketOptions() {
-      const width = window.innerWidth;
-      
-      if (width >= 1024) {
-        return { teamWidth: 160, scoreWidth: 40, matchMargin: 50, roundMargin: 80, disableToolbar: true, disableTeamEdit: true };
-      } else if (width >= 768) {
-        return { teamWidth: 140, scoreWidth: 35, matchMargin: 40, roundMargin: 60, disableToolbar: true, disableTeamEdit: true };
-      } else {
-        return { teamWidth: 110, scoreWidth: 30, matchMargin: 30, roundMargin: 40, disableToolbar: true, disableTeamEdit: true };
-      }
-    }
-
-    function renderBrackets() {
-      $('#tournament, #tournament2, #tournament3').empty();
-      const bracketOptions = getBracketOptions();
-      $('#tournament').bracket({ init: data, ...bracketOptions });
-      $('#tournament2').bracket({ init: tada, ...bracketOptions });
-      $('#tournament3').bracket({ init: oneonone, ...bracketOptions });
-    }
-
-    $(function () {
-      renderBrackets();
-    });
-
-    var resizeTimer;
-    $(window).on('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(renderBrackets, 150);
-    });
-  </script>
 </body>
+  <script>
+function getBracketOptions() {
+  const width = window.innerWidth;
+
+  if (width >= 1440) {
+    return { teamWidth: 120, scoreWidth: 40, matchMargin: 30, roundMargin: 60 };
+  } else if (width >= 1024) {
+    return { teamWidth: 100, scoreWidth: 30, matchMargin: 25, roundMargin: 50 };
+  } else if (width >= 768) {
+    return { teamWidth: 80, scoreWidth: 25, matchMargin: 20, roundMargin: 40 };
+  } else {
+    // มือถือจอเล็ก
+    return { teamWidth: 60, scoreWidth: 20, matchMargin: 15, roundMargin: 30 };
+  }
+}
+
+// เรียก bracket แต่ละอัน
+$(function () {
+  const bracketOptions = getBracketOptions();
+  
+  $('#tournament').bracket({ init: data, ...bracketOptions }); 
+  $('#tournament2').bracket({ init: tada, ...bracketOptions }); 
+  $('#tournament3').bracket({ init: oneonone, ...bracketOptions }); 
+});
+
+// ปรับขนาดอัตโนมัติเมื่อ resize
+$(window).on('resize', function() {
+  const bracketOptions = getBracketOptions();
+
+  $('#tournament').bracket({ init: data, ...bracketOptions }); 
+  $('#tournament2').bracket({ init: tada, ...bracketOptions }); 
+  $('#tournament3').bracket({ init: oneonone, ...bracketOptions }); 
+});
+</script>
+
 </html>
