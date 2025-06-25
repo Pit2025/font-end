@@ -119,15 +119,16 @@ const tadada = {
   "teams": [
     ["เหนื่อยฟรีไม่มีถ้วย", "Grasped Shamped Morped Phazed Draped"],
     ["นี้คนหรือขี้", "แก๊งค์คนป่วย"],
+    ["The ÉLAN", null],
+    [null, null],
     ["Jaaocto", "ชายสามเกย์สอง"],
-    [null, null],
-    [null, null],
-    [null, null],
+    ["I am gay", null],
     [null, null],
     [null, null]
   ],
   "results": 
     [
+    [[1, 0],[1, 0],[0, 0],[0, 0],[1, 0],[0, 0],[0, 0],[0, 0]],
     [[0, 0],[0, 0],[0, 0],[0, 0]],
     [[0, 0],[0, 0]],
     [[0, 0]]
