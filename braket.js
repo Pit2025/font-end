@@ -81,7 +81,7 @@ const tada = {
       [1, 0], [0, 1], [0, 1], [1, 0]
     ],
     [
-      ["รอ", null], [null, null]
+      [null, null], [null, null]
     ]
   ]
 }
